@@ -31,4 +31,20 @@ const app = new Vue({
         ],
         c: 0,
     },
+    methods: {
+        slideUp() {
+            if (this.c != 0) {
+                this.c--;
+            } else {
+                this.c = this.slides.length - 1;
+            }
+        },
+        slideDown() {
+            if (this.c < (this.slides.length - 1)) {
+                this.c++;
+            } else {
+                this.c = 0;
+            }
+        },
+    }
 });
