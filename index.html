@@ -7,13 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Slider</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
     <div id="root">
 
-        <main id="site_main"></main>
+        <main id="site_main" class="container">
+            <div class="image_wrap">
+
+                <div class="image">
+                    <img :src="slides[c].image" :alt="slides[c].title">
+                    <div class="desc">
+                        <h3 class="title-list">{{slides[c].title}}</h3>
+                        <p class="text-list">{{slides[c].text}}</p>
+                    </div>
+                </div>
+                <!-- /.image -->
+
+                <div class="list">
+                    <span id="up">
+                        <i class="fas fa-arrow-circle-up"></i>
+                    </span>
+                    <span id="down">
+                        <i class="fas fa-arrow-circle-down"></i>
+                    </span>
+                    <ul class="image_list">
+                        <li v-for="slide in slides">
+                            <img :src="slide.image" :alt="slide.title">
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.list -->
+
+            </div>
+            <!-- /.image_wrap -->
+        </main>
         <!-- /#site_main -->
 
     </div>
