@@ -30,29 +30,22 @@ const app = new Vue({
             },
         ],
         c: 0,
-        isActive: true,
         timer: 0,
     },
     methods: {
         slideUp() {
-            this.isActive = false;
             if (this.c != 0) {
                 this.c--;
-                this.isActive = true;
             } else {
                 this.c = this.slides.length - 1;
-                this.isActive = true;
             }
             this.resetAutoplay();
         },
         slideDown() {
-            this.isActive[this.c] = false;
             if (this.c < (this.slides.length - 1)) {
                 this.c++;
-                this.isActive[this.c] = true;
             } else {
                 this.c = 0;
-                this.isActive[this.c] = true;
             }
             this.resetAutoplay();
         },

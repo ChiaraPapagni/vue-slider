@@ -55,7 +55,7 @@ Main
     filter: brightness(60%);
 }
 
-.active {
+.image_list>li>.active {
     filter: brightness(120%);
     border: 2px solid lightgray;
 }

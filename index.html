@@ -37,8 +37,8 @@
                         <i class="fas fa-arrow-circle-down"></i>
                     </span>
                     <ul class="image_list">
-                        <li v-for="(slide, i) in slides" :class="isActive[c] ? 'active' : ''">
-                            <img :src="slide.image" :alt="slide.title">
+                        <li v-for="(slide, i) in slides">
+                            <img :src=" slide.image" :alt="slide.title" :class="i == c ? 'active' : ''">
                         </li>
                     </ul>
                 </div>
