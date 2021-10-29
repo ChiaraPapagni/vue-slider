@@ -4,3 +4,76 @@
     margin: 0;
     padding: 0;
 }
+
+
+/***************
+Main
+***************/
+.container {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.image_wrap {
+    width: fit-content;
+    display: flex;
+    margin: auto;
+}
+
+.image {
+    position: relative;
+}
+
+.image img {
+    width: 710px;
+    height: 400px;
+}
+
+.image .desc {
+    position: absolute;
+    color: #FFFFFF;
+    text-align: right;
+    bottom: 2rem;
+    right: 1.5rem;
+}
+
+.image_list {
+    list-style: none;
+}
+
+.image_list li {
+    height: 80px;
+}
+
+.image_list img {
+    width: 170px;
+    height: 80px;
+    background-position: center;
+}
+
+.image_list>li>img {
+    filter: brightness(60%);
+}
+
+.list {
+    position: relative;
+}
+
+.list #up,
+.list #down {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.list #up {
+    top: 0.5rem;
+}
+
+.list #down {
+    bottom: 0.5rem;
+}
