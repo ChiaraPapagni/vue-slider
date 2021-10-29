@@ -55,6 +55,11 @@ Main
     filter: brightness(60%);
 }
 
+.active {
+    filter: brightness(120%);
+    border: 2px solid lightgray;
+}
+
 .list {
     position: relative;
 }
