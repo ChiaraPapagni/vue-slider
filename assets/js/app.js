@@ -61,9 +61,9 @@ const app = new Vue({
             this.autoplay();
         },
         autoplay() {
-            let app = this;
+            let t = this;
             this.timer = setInterval(function () {
-                app.slideDown();
+                t.slideDown();
             }, 3000);
         },
     },
